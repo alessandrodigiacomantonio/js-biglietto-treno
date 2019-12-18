@@ -2,7 +2,7 @@ alert("Salve, Benvenuto in EasyTicketsOnline, la più facile ed economica piatta
 var dis = prompt("Qual è la distanza che devi percorrere? (ATTENZIONE: con ogni biglietto possono essere percorsi al massimo 500km)");
 var distanza = dis.match(/\d+/);
 distanza = Math.floor(distanza);
-if (distanza < 1 || distanza > 500 || isNaN(dis)) {
+if (distanza < 1 || distanza > 500 || isNaN(distanza)) {
   alert('Purtroppo hai inserito delle distanze non coperte dal nostro servizio di trasporti, ci spiace !');
 } else {
     var prezzoDefault = distanza * 0.21;
@@ -23,5 +23,5 @@ if (distanza < 1 || distanza > 500 || isNaN(dis)) {
         alert('Il prezzo del biglietto è di \n' + '€ ' + prezzo +'\n   Grazie per aver scelto il nostro servizio e Buon Viaggio');
     } else {
           alert('I bebè, fino a 2 anni, viaggiano gratis !');
-}
+    }
 }
