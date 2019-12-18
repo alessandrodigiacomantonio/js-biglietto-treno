@@ -2,14 +2,19 @@ function Acquista() {
   alert("Salve, Benvenuto in EasyTicketsOnline, la più facile ed economica piattaforma dove acquistare biglietti per le tue destinazioni!");
   var dis = prompt("Qual è la distanza che devi percorrere? (ATTENZIONE: con ogni biglietto possono essere percorsi al massimo 500km)");
   var distanza = dis.match(/\d+/);
-  distanza = Math.floor(distanza);
+  console.log(distanza);
+  // distanza = Math.floor(distanza);
+  distanza = parseInt(distanza);
+  console.log(distanza);
   if (distanza < 1 || distanza > 500 || isNaN(distanza)) {
     alert('Purtroppo hai inserito delle distanze non coperte dal nostro servizio di trasporti, ci spiace !');
   } else {
       var prezzoDefault = distanza * 0.21;
       var eta = prompt("Qual è la tua età?");
       var anni = eta.match(/\d+/);
-      anni = Math.floor(anni);
+      console.log(anni);
+      anni = parseInt(anni);
+      console.log(anni);
       if (isNaN(anni)) {
         alert('Non hai inserito un\'età valida !');
       } else if (anni > 122) {
