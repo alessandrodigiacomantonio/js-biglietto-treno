@@ -12,9 +12,7 @@ function Acquista() {
       var prezzoDefault = distanza * 0.21;
       var eta = prompt("Qual è la tua età?");
       var anni = eta.match(/\d+/);
-      console.log(anni);
       anni = parseInt(anni);
-      console.log(anni);
       if (isNaN(anni)) {
         alert('Non hai inserito un\'età valida !');
       } else if (anni > 122) {
